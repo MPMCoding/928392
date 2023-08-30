@@ -1,0 +1,43 @@
+<title>Gerador de Números</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #numeroGerado, #nomeSorteado {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<h1>Gerador de Números</h1>
+<p>Clique no botão para gerar um número:</p>
+<button onclick="gerarNumero()">Gerar Número</button>
+<p id="numeroGerado"></p>
+<p id="nomeSorteado"></p>
+
+<script>
+// ... O restante do seu código JavaScript permanece o mesmo ...
+</script>
+</body>
+</html>
