@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gerador de Números</title>
+</head>
+<body>
+<h1>Gerador de Números</h1>
+<p>Clique no botão para gerar um número:</p>
+<button onclick="gerarNumero()">Gerar Número</button>
+<p id="numeroGerado"></p>
+<p id="nomeSorteado"></p>
+
+<script>
+var participantes = [
+  "ALEXIA FELIX TRINDADE",
+  "ARTHUR SANTOS FERNANDES",
+  "CARLOS SERAFIM DOS SANTOS",
+  "EDUARDA HELLEN DA SILVA SOUZA",
+  "EMILY VELOSO ANDRADE",
+  "GUILHERME FELIPE DA CRUZ BORGES",
+  "HEVELYN CRISTINA DA ROCHA",
+  "IARA DEISILANE FIRMINO AZEVEDO SILVA",
+  "INÁCIO ZOÉ SATIRO LEANDRO",
+  "JOAO VITOR DUARTE PINTO",
+  "JOYCE ALVES FERREIRA",
+  "LARISSA EMILY DE MELO SILVA",
+  "LARYSSA AYANE REIA COSTA",
+  "LUCAS DANIEL DE SOUZA",
+  "LUCAS DE FREITAS NUNES",
+  "MARA SILVA SOUZA",
+  "MARIA LUISA ABELHA RODRIGUES",
+  "MARIA LUIZA GOIS LOPES PATROCINIO",
+  "MATHEUS PEREIRA MARQUES",
+  "MIGUEL AFONSO MARQUES DE SOUZA",
+  "PATRICIA HELENA SOARES ALVES NETA",
+  "PAULO HENRIQUE LOBATO VIEIRA SILVA",
+  "RYAN ALVES FERREIRA",
+  "RYAN CARLOS DA SILVA AVELINO",
+  "SARA FERNANDES SOUSA",
+  "VALERIA AGUIAR PARENTONI SENA",
+  "VITÓRIA DO CARMO ARAÚJO",
+  "GUSTAVO RODRIGUES AMARAL",
+  "ANA CLARA RODRIGUES REZENDE",
+  "HELENA DA SILVA LOPES MARTINS",
+  "KAREN CRISTINA DE OLIVEIRA SOARES",
+  "PEDRO HENRIQUE SOUZA PEREIRA",
+  "SOPHIA DATYOUNG S FERNANDES",
+  "Maria Eduarda Viega"
+];
+
+var resultadosObrigatorios = [1, 2, 4, 6, 20, 22, 24, 29, 28, 12, 35, 14, 32, 16, 36, 18, 19, 7, 21, 8, 23, 9, 25, 26, 27, 11, 10, 30, 31, 15, 33, 13, 35, 17];
+
+function gerarNumero() {
+  var numeroGerado;
+  var nomeSorteado;
+
+  if (resultadosObrigatorios.length > 0) {
+    numeroGerado = resultadosObrigatorios.shift();
+  } else {
+    numeroGerado = Math.floor(Math.random() * 36) + 1;
+  }
+
+  nomeSorteado = participantes[numeroGerado - 1];
+
+  document.getElementById("numeroGerado").textContent = "Número gerado: " + numeroGerado;
+  document.getElementById("nomeSorteado").textContent = "Nome sorteado: " + nomeSorteado;
+}
+</script>
+</body>
+</html>
